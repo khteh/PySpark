@@ -7,5 +7,5 @@
 
 ```
 $ spark-submit --master local[`nproc`] <filename>.py
-$ spark-submit --master k8s://https://<k8s-apiserver-host>:<k8s-apiserver-port> --conf spark.executor.instances=1 --conf spark.kubernetes.container.image=spark:python3 --conf spark.kubernetes.file.upload.path=/tmp --deploy-mode cluster <filename>.py
+$ spark-submit --master k8s://https://192.168.1.77:16443 --conf spark.executor.instances=1 --conf spark.kubernetes.container.image=spark:python3 --conf spark.kubernetes.file.upload.path=/tmp --conf spark.kubernetes.authenticate.driver.serviceAccountName=sa-apache-spark --deploy-mode cluster <filename>.py
 ```
