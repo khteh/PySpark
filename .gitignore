@@ -1,0 +1,7 @@
+*.swp
+*.crt
+*.key
+**/.~lock*
+**/.env
+**/__pycache__/
+**/*.png
