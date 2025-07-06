@@ -1,3 +1,3 @@
 install_requires=[
-    'pyspark==3.5.5'
+    'pyspark==4.0.0'
 ]
