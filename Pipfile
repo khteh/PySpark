@@ -5,6 +5,8 @@ name = "pypi"
 
 [packages]
 pyspark = "*"
+requests = "*"
+python-magic = "*"
 
 [dev-packages]
 

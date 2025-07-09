@@ -25,7 +25,5 @@
 
 ```
 $ kubectl proxy
-$ pipenv run spark-submit --master k8s://http://127.0.0.1:8001 --conf spark.executor.instances=1 --conf spark.kubernetes.container.image=spark:python3 --conf spark.kubernetes.file.upload.path=/tmp --conf spark.kubernetes.authenticate.driver.serviceAccountName=sa-apache-spark --deploy-mode cluster --name TextFile <path to>TextFile.py
+$ pipenv run spark-submit --master k8s://http://127.0.0.1:8001 --conf spark.executor.instances=1 --conf spark.kubernetes.container.image=khteh/pyspark:latest --conf spark.kubernetes.authenticate.driver.serviceAccountName=sa-apache-spark --deploy-mode cluster --name TextFile local:///app/TextFile.py
 ```
-
-TODO: Create `Dockerfile` and build a docker image
